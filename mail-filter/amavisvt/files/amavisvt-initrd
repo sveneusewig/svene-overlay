@@ -1,0 +1,22 @@
+#!/sbin/openrc-run
+#
+# Gentoo AmavisVTd initrd script
+#
+# Author: Sven Eusewig <sveneusewig@yahoo.de>
+#
+
+name="AmavisVTd daemon"
+description="Amavis daemon to use the VirusTotal API"
+
+command="/usr/bin/amavisvt-daemon"
+command_args="${AMAVISVT_OPTIONS}"
+command_background="yes"
+command_user="amavis"
+pidfile="/run/amavisvt.pid"
+procname="amavisvtd"
+
+depend() {
+	need net
+	need logger
+	after amavisd
+}

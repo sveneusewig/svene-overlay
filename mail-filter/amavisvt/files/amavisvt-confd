@@ -1,0 +1,9 @@
+# Config file for /etc/init.d/amavisvt
+#
+# For information on options, see "/usr/bin/amavisvt-daemon -h".
+
+AMAVISVT_OPTIONS=""
+
+#  -v, --verbose         Increase verbosity
+#  -d, --debug           Send verbose log messages to stdout too
+#  -s SOCKET, --socket SOCKET
